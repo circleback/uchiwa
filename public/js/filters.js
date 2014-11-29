@@ -32,6 +32,8 @@ filterModule.filter('buildEvents', function() {
         event.check = {};
       }
       event.sourceName = event.check.source || event.client.name;
+      event.envName = event.client.env || event.client.tags.env;
+      event.appName = event.client.app || event.client.tags.app;
     });
     return events;
   };

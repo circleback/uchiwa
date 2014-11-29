@@ -55,6 +55,8 @@
               <tr>
                 <th class="col-min" ng-click="predicate = '-check.status'; reverse=!reverse"><i class="fa fa-sort"></i></th>
                 <th class="col-sm-2" ng-click="predicate = 'sourceName'; reverse=!reverse">Source <i class="fa fa-sort"></i></th>
+                <th class="col-dc" ng-click="predicate = 'envName'; reverse=!reverse">Env <i class="fa fa-sort"></i></th>
+                <th class="col-dc" ng-click="predicate = 'appName'; reverse=!reverse">App <i class="fa fa-sort"></i></th>
                 <th class="col-sm-2" ng-click="predicate = 'check.name'; reverse=!reverse">Check <i class="fa fa-sort"></i></th>
                 <th class="col-sm-4" ng-click="predicate = 'check.output'; reverse=!reverse">Output <i class="fa fa-sort"></i></th>
                 <th class="col-sm-1" ng-click="predicate = 'occurrences'; reverse=!reverse"><i class="fa fa-slack" tooltip-placement="top" tooltip="Occurrences"></i> <i class="fa fa-sort"></i></th>
@@ -68,6 +70,8 @@
                   <i class="fa {{ event.acknowledged | getAckClass }}"></i>
                 </td>
                 <td class="dropdown-toggle" >{{ event.sourceName }}</td>
+                <td>{{ event.envName }}</td>
+                <td>{{ event.appName }}</td>
                 <td class="main check-name">{{ event.check.name }}</td>
                 <td class="output">{{ event.check.output }}</td>
                 <td>{{ event.occurrences }}</td>

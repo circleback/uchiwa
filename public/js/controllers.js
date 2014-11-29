@@ -67,7 +67,7 @@ controllerModule.controller('checks', ['$scope', '$routeParams', 'routingService
   function ($scope, $routeParams, routingService, Page) {
     Page.setTitle('Checks');
     $scope.pageHeaderText = 'Checks';
-    $scope.predicate = 'name';
+    $scope.predicate = 'app';
 
     // Helpers
     $scope.subscribersSummary = function(subscribers){
